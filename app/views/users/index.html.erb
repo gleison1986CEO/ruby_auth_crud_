@@ -1,0 +1,67 @@
+
+
+ <style>
+ body{
+   background-color:#ffffff;
+ }
+ #form_{
+    padding:20px;
+    margin: 0 auto;
+    background-color:#d9d9d9;
+    max-width:400px;
+    height:300px;
+    width:1200px;
+    margin-top:200px;
+    border-radius:12px;
+
+ }
+ #input_{
+
+   padding:14px;
+   border-radius:36px;
+   width:300px;
+   margin-bottom:14px;
+   border:none;
+   color:#000000;
+ }
+ #sub_{
+    padding:14px;
+    background-color:red;
+    border-radius:36px;
+    width:330px;
+    margin-bottom:14px;
+    border:none;
+    color:#ffffff;
+    cursor:pointer;
+ }
+ #p{
+    margin-top:55px;
+    font-size:11px;
+ }
+ #h{
+   font-size:11px;
+   color:#000000;
+   margin-top:20px;
+   text-decoration:none;
+   margin-top:10px;
+ }
+ </style>
+<center>
+
+<form  id="form_"action="/sessions" method="POST">
+<p id="p"> GERENCIAMENTO DE USUARIOS</p>
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+<input id="input_"type="email" name="login[email]" placeholder="seu email">
+<input id="input_"type="password" name="login[password]" placeholder="sua senha">
+<input id="sub_"type="submit" name="submit" value="entrar no sistema"class="submit">
+
+</form>
+<a id="h"href="/cadastre-se"> AINDA NAO TEM UMA CONTA? CADASTRE-SE</a>
+
+<div class="errors">
+     <% if flash[:login_errors]%>
+     <% flash[:login_errors].each do |error| %>
+        <p> <%=error%></p>
+     <%end%>
+<%end%>   
+</center>      

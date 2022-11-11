@@ -1,0 +1,33 @@
+
+<%= form_with(model: tabela) do |form| %>
+  <% if tabela.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tabela.errors.count, "error") %> prohibited this tabela from being saved:</h2>
+
+      <ul>
+        <% tabela.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :whatsapp, style: "display: block" %>
+    <%= form.text_field :whatsapp %>
+  </div>
+
+  <div>
+    <%= form.submit value="salvar usuário" %>
+  </div>
+<% end %>

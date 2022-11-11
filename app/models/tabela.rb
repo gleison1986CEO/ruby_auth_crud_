@@ -1,0 +1,2 @@
+class Tabela < ApplicationRecord
+end

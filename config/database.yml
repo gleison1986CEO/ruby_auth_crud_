@@ -1,0 +1,30 @@
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: ruby
+  pool: 5
+  username: gleison
+  password: 0908Gle@
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: ruby
+  pool: 5
+  username: gleison
+  password: 0908Gle@
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: ruby
+  pool: 5
+  username: gleison
+  password: 0908Gle@
+  host: localhost

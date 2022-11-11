@@ -1,0 +1,58 @@
+
+ <style>
+ body{
+   background-color:#ffffff;
+ }
+ #form_{
+    padding:20px;
+    margin: 0 auto;
+    background-color:#d9d9d9;
+    max-width:400px;
+    height:300px;
+    width:1200px;
+    margin-top:200px;
+    border-radius:12px;
+
+ }
+ #input_{
+
+   padding:14px;
+   border-radius:36px;
+   width:300px;
+   margin-bottom:14px;
+   border:none;
+   color:#000000;
+ }
+ #sub_{
+    padding:14px;
+    background-color:red;
+    border-radius:36px;
+    width:330px;
+    margin-bottom:14px;
+    border:none;
+    color:#ffffff;
+    cursor:pointer;
+ }
+ #p{
+    margin-top:25px;
+    font-size:11px;
+ }
+ #h{
+   font-size:11px;
+   color:#000000;
+   margin-top:20px;
+   text-decoration:none;
+   margin-top:10px;
+ }
+ </style>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @tabela %>
+
+<div>
+  <%= link_to "Editar este usuário", edit_tabela_path(@tabela) %> |
+  <%= link_to "Voltar ao sistema", tabelas_path %>
+
+  <%= button_to "apagar este usuário", @tabela, method: :delete %>
+</div>

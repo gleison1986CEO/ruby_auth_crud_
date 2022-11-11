@@ -1,0 +1,66 @@
+
+
+ <style>
+ body{
+   background-color:#ffffff;
+ }
+ #form_{
+    padding:20px;
+    margin: 0 auto;
+    background-color:#d9d9d9;
+    max-width:400px;
+    height:300px;
+    width:1200px;
+    margin-top:200px;
+    border-radius:12px;
+
+ }
+ #input_{
+
+   padding:14px;
+   border-radius:36px;
+   width:300px;
+   margin-bottom:14px;
+   border:none;
+   color:#000000;
+ }
+ #sub_{
+    padding:14px;
+    background-color:red;
+    border-radius:36px;
+    width:330px;
+    margin-bottom:14px;
+    border:none;
+    color:#ffffff;
+    cursor:pointer;
+ }
+ #p{
+    margin-top:25px;
+    font-size:11px;
+ }
+ #h{
+   font-size:11px;
+   color:#000000;
+   margin-top:20px;
+   text-decoration:none;
+   margin-top:10px;
+ }
+ </style>
+<center>
+
+<form id="form_"action="/users" method="POST">
+<p id="p"> GERENCIAMENTO DE USUARIOS</p>
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+<input id="input_"type="name" name="user[name]" placeholder="nome de usuário">
+<input id="input_"type="email" name="user[email]" placeholder="seu melhor email">
+<input id="input_"type="password" name="user[password]" placeholder="sua senha">
+<input  id="sub_"type="submit" name="submit" value="cadastre-se"class="submit">
+</form>
+<a id="h"href="/"> JA POSSUI UMA CONTA? FAÇA LOGIN</a>
+<div class="errors">
+     <% if flash[:register_errors]%>
+     <% flash[:register_errors].each do |error| %>
+        <p> <%=error%></p>
+     <%end%>
+<%end%>  
+</center>
