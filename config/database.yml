@@ -5,8 +5,8 @@ development:
   reconnect: false
   database: ruby
   pool: 5
-  username: gleison
-  password: 0908Gle@
+  username: XXXXX
+  password: XXXXX
   host: localhost
 
 test:
@@ -15,8 +15,8 @@ test:
   reconnect: false
   database: ruby
   pool: 5
-  username: gleison
-  password: 0908Gle@
+  username: XXXXX
+  password: XXXXX
   host: localhost
 
 production:
@@ -25,6 +25,6 @@ production:
   reconnect: false
   database: ruby
   pool: 5
-  username: gleison
-  password: 0908Gle@
+  username: XXXXX
+  password: XXXXX
   host: localhost
